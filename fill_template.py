@@ -89,7 +89,8 @@ class Generator_of_Geant4():
                 os.path.normpath(
                   os.path.expanduser(d)))
     def get_exe_path(self):
-        return self.absdir(os.path.dirname(sys.argv[0]))
+        return self.absdir(os.path.dirname(__file__))
+        #return self.absdir(os.path.dirname(sys.argv[0]))
 
     def get_outputdir(self, outputdir):
         if outputdir == None:
